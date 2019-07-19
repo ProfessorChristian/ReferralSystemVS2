@@ -3,33 +3,133 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:cardView="clr-namespace:CardView;assembly=CardView"
              mc:Ignorable="d"
              x:Class="ReferralSystem.Views.HomePage">
 
 
-    <StackLayout 
-        Padding="8,8,8,8" 
-        Orientation="Vertical">
-        <StackLayout 
-            Padding="8,8,8,8" 
-            Orientation="Horizontal">
-            <cardView:CardView
-                BackgroundColor="White"
-                CardViewHasShadow="True"
-                HeightRequest="700"
-                WidthRequest="500">
-                <cardView:CardView.CardViewContent>
-                    <StackLayout
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        HeightRequest="220"
-                        WidthRequest="220">
-                        <Label>Sample Text Here</Label>
-                    </StackLayout>
-                </cardView:CardView.CardViewContent>
-            </cardView:CardView>
-        </StackLayout>
+    <StackLayout
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill"
+        BackgroundColor="White">
+        <Grid
+            Padding="10,10,10,10"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" x:Name="firstRow" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Frame
+                BackgroundColor="#FFB044"
+                HasShadow="True"
+                CornerRadius="10"
+                Grid.Row="0"
+                Grid.Column="0">
+                <StackLayout
+                            Padding="10,10,10,10">
+                    <Label 
+                            Text="Total Doctors"
+                            TextColor="White"        
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                BackgroundColor="#027BE0"
+                HasShadow="True"
+                CornerRadius="10"
+                Grid.Row="0"
+                Grid.Column="1">
+                <StackLayout
+                    Padding="10,10,10,10">
+                    <Label 
+                        Text="Online Doctors"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                BackgroundColor="#DF5D60"
+                HasShadow="True"
+                CornerRadius="10"
+                Grid.Row="1"
+                Grid.Column="0">
+                <StackLayout
+                    Padding="10,10,10,10">
+                    <Label 
+                        Text="Active Facility"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                BackgroundColor="#35D435"
+                HasShadow="True"
+                CornerRadius="10"
+                Grid.Row="1"
+                Grid.Column="1">
+                <StackLayout
+                    Padding="10,10,10,10"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label 
+                        Text="Referred Patients"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+
+        <Grid
+            Padding="10,10,10,10"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Frame
+            BackgroundColor="#EDD858"
+            HasShadow="True"
+            CornerRadius="10"
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="2">
+                <StackLayout
+                    Padding="8,8,8,8"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        Text="Monthly Activity"
+                        TextColor="Black"
+                        BackgroundColor="Beige"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"/>
+                    <BoxView
+                        HeightRequest="1"
+                        WidthRequest="400"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="Black"
+                        Opacity="0.1"/>
+                    <Label
+                        Text="Sample Text for Monthly Activity"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
